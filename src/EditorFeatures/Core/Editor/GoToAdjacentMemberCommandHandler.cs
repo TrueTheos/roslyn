@@ -93,7 +93,6 @@ internal sealed class GoToAdjacentMemberCommandHandler(IOutliningManagerService 
         if (targetPosition != null)
         {
             args.TextView.TryMoveCaretToAndEnsureVisible(new SnapshotPoint(subjectBuffer.CurrentSnapshot, targetPosition.Value), _outliningManagerService);
-            args.TextView.Selection.Clear();
         }
 
         return true;
